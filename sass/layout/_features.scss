@@ -1,0 +1,31 @@
+.features {
+  display: flex;
+}
+
+.features__item {
+  width: calc((100% - 90px) / 4);
+  &:not(:last-child) {
+    margin-right: var(--typical-margin);
+  }
+}
+
+.features__icon {
+  @extend %flex-centered;
+  height: 120px;
+  margin-bottom: 30px;
+
+  border-radius: 4px;
+  background-color: var(--secondary-bg-color);
+}
+
+.features__title {
+  margin-bottom: 10px;
+  @extend %title;
+
+  @include font(null, 14px, 1.14, null);
+  text-transform: uppercase;
+}
+
+.features__text {
+  line-height: 1.71;
+}

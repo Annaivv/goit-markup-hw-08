@@ -1,0 +1,181 @@
+.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition-property: opacity;
+  @extend %transitions;
+}
+
+.modal {
+  @include absolute($width: 528px, $top: 50%, $left: 50%);
+  padding: 40px;
+
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 3;
+
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transition-property: transform;
+  @extend %transitions;
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal__close {
+  @include absolute($width: 30px, $top: 8px, $left: null);
+  right: 8px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #ffffff;
+  @include border($bc: rgba(0, 0, 0, 0.1), $br: 50%);
+  fill: #000000;
+
+  transition-property: fill;
+  @extend %transitions;
+}
+
+.modal__close:hover .modal__icon {
+  fill: var(--accent-color);
+}
+
+.modal__title {
+  margin-bottom: 12px;
+
+  text-align: center;
+  font-size: 20px;
+  color: var(--title-text-color);
+}
+
+.callback {
+  text-align: left;
+}
+
+.callback__field {
+  margin-bottom: 10px;
+}
+
+.callback__wrap {
+  position: relative;
+}
+
+.callback__icon {
+  @include absolute($width: null, $top: 50%, $left: 12px);
+  transform: translateY(-50%);
+
+  fill: var(--title-text-color);
+
+  transition-property: outline, fill;
+  @extend %transitions;
+  .callback__input:focus-within ~ & {
+    outline: none;
+    fill: var(--accent-color);
+  }
+}
+
+.callback__input,
+.callback__label {
+  display: block;
+}
+
+.callback__label {
+  margin-bottom: 4px;
+
+  @include font(null, 12px, 1.16, 0.01em);
+}
+
+.callback__input {
+  padding: 12px 11px;
+  padding-left: 42px;
+  width: 100%;
+  height: 40px;
+
+  @include border($bc: rgba(33, 33, 33, 0.2));
+}
+
+.callback__textarea {
+  padding: 12px 16px;
+  width: 100%;
+  height: 120px;
+  resize: none;
+
+  @include border($bc: rgba(33, 33, 33, 0.2));
+
+  @include font(null, 12px, 1.17, 0.01em);
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.callback__input,
+.callback__textarea {
+  transition-property: outline, border-color;
+  @extend %transitions;
+  &:focus {
+    outline: transparent;
+    border-color: var(--accent-color);
+  }
+}
+
+.agreement {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  position: relative;
+
+  text-align: center;
+}
+
+.agreement__policy {
+  @extend %flex-centered;
+}
+
+.agreement__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 15px;
+  margin-right: 8.5px;
+
+  background-color: transparent;
+  fill: transparent;
+
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+  .agreement__checkbox:checked + & {
+    background-color: var(--accent-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-origin: border-box;
+    fill: #ffffff;
+
+    border-color: transparent;
+  }
+}
+
+.agreement__link {
+  margin-right: 8.38px;
+  color: var(--accent-color);
+}
+
+.callback__button {
+  display: block;
+}

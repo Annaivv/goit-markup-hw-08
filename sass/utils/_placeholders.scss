@@ -1,0 +1,19 @@
+%transitions {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+%flex-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%title {
+  color: var(--title-text-color);
+}
+
+%link {
+  text-decoration: none;
+  color: inherit;
+}
