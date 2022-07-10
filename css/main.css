@@ -34,6 +34,8 @@ a {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -222,8 +224,13 @@ body {
   }
 }
 
+.examples__container {
+  padding-top: 0;
+}
+
 .examples__list {
   display: flex;
+  gap: var(--gap);
 }
 
 .examples__item {

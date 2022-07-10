@@ -6,8 +6,13 @@
   }
 }
 
+.examples__container {
+  padding-top: 0;
+}
+
 .examples__list {
   display: flex;
+  gap: var(--gap);
 }
 
 .examples__item {
