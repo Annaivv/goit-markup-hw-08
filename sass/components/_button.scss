@@ -1,6 +1,7 @@
 .button {
-  font-size: 16px;
+  @include font(700, 16px, 1.88, 0.06em);
   text-align: center;
+
   @include border($bw: 0);
 
   transition-property: background-color, color, filter;

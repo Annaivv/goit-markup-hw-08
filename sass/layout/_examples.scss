@@ -1,12 +1,17 @@
 .examples {
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}
+
+.examples__list {
   display: flex;
 }
 
 .examples__item {
   width: calc((100% - 60px) / 3);
-  &:not(:last-child) {
-    margin-right: var(--typical-margin);
-  }
 }
 
 .examples__thumb {
