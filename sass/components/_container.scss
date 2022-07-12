@@ -15,5 +15,7 @@
   @include desktop {
     width: $desktop;
     padding: 94px 15px;
+    max-width: 1600px;
+    text-align: center;
   }
 }
