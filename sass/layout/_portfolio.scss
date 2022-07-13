@@ -1,12 +1,22 @@
+//Buttons
+
 .button-list {
-  @extend %flex-centered;
-  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+
+  margin-bottom: 40px;
+  @include tablet {
+    justify-content: center;
+  }
 
   text-align: center;
 }
 
 .button-list__item:not(:last-child) {
   margin-right: 8px;
+  margin-bottom: 15px;
 }
 
 .button-list__button {
@@ -18,24 +28,29 @@
   @include font(500, null, 1.62, null);
 }
 
+//Cards
 .portfolio {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
 }
 
 .portfolio__item {
-  width: calc((100% - 60px) / 3);
+  width: 100%;
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 60px) / 3);
+  }
 
   background: #ffffff;
 
   transition-property: filter;
   @extend %transitions;
-  &:not(:nth-child(3n)) {
-    margin-right: var(--typical-margin);
-  }
 
-  &:not(:nth-last-child(-n + 3)) {
-    margin-bottom: var(--typical-margin);
+  @include tablet {
+    margin-bottom: 0;
   }
 
   &:hover {
@@ -55,7 +70,7 @@
 .portfolio__overlay {
   @include absolute($top: 100%);
   height: 100%;
-  padding: 63px 24px;
+  padding: 77px 24px;
 
   @include font(null, 18px, 1.56, null);
 
@@ -70,7 +85,13 @@
 }
 
 .portfolio__info {
-  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 24px;
+  padding-right: 24px;
+  height: 110px;
   @include border($bc: #eeeeee, $br: null);
 }
 
