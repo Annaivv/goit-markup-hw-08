@@ -98,6 +98,7 @@ body {
 @media screen and (min-width: 1200px) {
   .section__title {
     margin-bottom: 50px;
+    font-size: 36px;
   }
 }
 
@@ -346,8 +347,14 @@ body {
 
 .agreement__policy {
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.17;
   width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .agreement__policy {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .agreement__icon {
@@ -427,6 +434,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 3;
   background-color: #fff;
   width: 100vw;
   height: 100vh;
@@ -439,6 +447,11 @@ body {
   height: 100%;
   justify-content: space-between;
   overflow: auto;
+}
+@media screen and (min-width: 1200px) {
+  .mob-menu__container {
+    justify-content: flex-start;
+  }
 }
 
 .mob-menu__top {
@@ -502,6 +515,11 @@ body {
     gap: 50px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .header__menu {
+    margin-left: 93px;
+  }
+}
 
 .menu__item {
   padding-top: 32px;
@@ -523,15 +541,17 @@ body {
 .current {
   color: var(--accent-color);
 }
-.current::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 4px;
-  bottom: -1px;
-  background: #2196f3;
-  border-radius: 2px;
+@media screen and (min-width: 1200px) {
+  .current::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    bottom: -1px;
+    background: #2196f3;
+    border-radius: 2px;
+  }
 }
 
 /* Contact links */
@@ -579,6 +599,7 @@ body {
     display: flex;
     gap: 30px;
     padding: 32px 0;
+    margin-left: auto;
   }
 }
 
@@ -587,7 +608,6 @@ body {
   padding-bottom: 118px;
   margin-left: auto;
   margin-right: auto;
-  min-height: 400px;
   text-align: center;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-mob.jpg");
   background-repeat: no-repeat;
@@ -614,6 +634,8 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -624,6 +646,10 @@ body {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero@2x.jpg");
   }
+}
+
+.hero__container {
+  padding: 0;
 }
 
 .hero__title {
@@ -692,6 +718,7 @@ body {
 
 .features__text {
   line-height: 1.71;
+  text-align: left;
 }
 
 .examples {
@@ -827,7 +854,6 @@ body {
 
 .footer__container {
   flex-wrap: wrap;
-  gap: 60px;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
@@ -966,6 +992,23 @@ body {
   margin-right: 10px;
 }
 
+.portfolio {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.portfolio__container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .button-list {
   display: flex;
   flex-wrap: wrap;
@@ -976,6 +1019,12 @@ body {
 @media screen and (min-width: 768px) {
   .button-list {
     justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .button-list {
+    margin-bottom: 50px;
   }
 }
 
@@ -993,7 +1042,7 @@ body {
   line-height: 1.62;
 }
 
-.portfolio {
+.portfolio__list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -1037,6 +1086,7 @@ body {
   padding: 77px 24px;
   font-size: 18px;
   line-height: 1.56;
+  text-align: left;
   background: rgba(33, 150, 243, 0.9);
   color: #ffffff;
   transition-property: transform;

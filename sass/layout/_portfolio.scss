@@ -1,3 +1,18 @@
+.portfolio {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin: 0 auto;
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.portfolio__container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 //Buttons
 
 .button-list {
@@ -7,11 +22,17 @@
   width: 100%;
 
   margin-bottom: 40px;
-  @include tablet {
-    justify-content: center;
-  }
 
   text-align: center;
+
+  @include tablet {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @include desktop {
+    margin-bottom: 50px;
+  }
 }
 
 .button-list__item:not(:last-child) {
@@ -29,7 +50,7 @@
 }
 
 //Cards
-.portfolio {
+.portfolio__list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -73,6 +94,7 @@
   padding: 77px 24px;
 
   @include font(null, 18px, 1.56, null);
+  text-align: left;
 
   background: rgba(33, 150, 243, 0.9);
   color: #ffffff;

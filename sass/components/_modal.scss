@@ -149,9 +149,11 @@
 }
 
 .agreement__policy {
-  // @extend %flex-centered;
-  @include font(null, 12px, 1.16, null);
+  @include font(null, 12px, 1.17, null);
   width: 100%;
+  @include desktop {
+    @include font(null, 14px, 1.71, null);
+  }
 }
 
 .agreement__icon {

@@ -1,7 +1,6 @@
 .footer__container {
   @extend %flex-centered;
   flex-wrap: wrap;
-  gap: 60px;
   text-align: center;
   @include tablet {
     align-items: flex-start;
