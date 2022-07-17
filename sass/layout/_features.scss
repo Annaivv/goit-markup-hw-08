@@ -32,6 +32,10 @@
   @include font(null, 14px, 1.14, null);
   text-transform: uppercase;
   text-align: center;
+
+  @include tablet {
+    text-align: left;
+  }
 }
 
 .features__text {

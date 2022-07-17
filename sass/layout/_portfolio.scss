@@ -38,6 +38,9 @@
 .button-list__item:not(:last-child) {
   margin-right: 8px;
   margin-bottom: 15px;
+  @include tablet {
+    margin-bottom: 0;
+  }
 }
 
 .button-list__button {

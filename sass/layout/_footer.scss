@@ -2,6 +2,7 @@
   @extend %flex-centered;
   flex-wrap: wrap;
   text-align: center;
+  gap: 60px;
   @include tablet {
     align-items: flex-start;
   }
@@ -9,6 +10,9 @@
     flex-wrap: nowrap;
     align-items: baseline;
     text-align: left;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    gap: 0;
   }
 }
 

@@ -715,6 +715,11 @@ body {
   text-transform: uppercase;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .features__title {
+    text-align: left;
+  }
+}
 
 .features__text {
   line-height: 1.71;
@@ -855,6 +860,7 @@ body {
 .footer__container {
   flex-wrap: wrap;
   text-align: center;
+  gap: 60px;
 }
 @media screen and (min-width: 768px) {
   .footer__container {
@@ -866,6 +872,9 @@ body {
     flex-wrap: nowrap;
     align-items: baseline;
     text-align: left;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    gap: 0;
   }
 }
 
@@ -1031,6 +1040,11 @@ body {
 .button-list__item:not(:last-child) {
   margin-right: 8px;
   margin-bottom: 15px;
+}
+@media screen and (min-width: 768px) {
+  .button-list__item:not(:last-child) {
+    margin-bottom: 0;
+  }
 }
 
 .button-list__button {
